@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	// import Header from '$lib/components/Header.svelte';
 	import Logo from '$lib/components/Logo.svelte';
@@ -6,13 +8,18 @@
 	import '$lib/css/reset.css';
 	import '$lib/css/styles.css';
 	let { data, children } = $props();
-</script>
+	let isReady = $state(false);
 
-<!-- <Header /> -->
-<header>
-	<a href="/"><Logo logoWidth={200} /></a>
-	<Nav />
-</header>
+	$effect(() => {
+		isReady = false;
+		if (data?.pathname === '/') {
+			document.body.classList.add('home');
+		} else {
+			document.body.classList.remove('home');
+		}
+		isReady = true;
+	});
+</script>
 
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,12 +29,22 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+{#if isReady}
+	<header>
+		<a href="/"><Logo logoWidth={200} /></a>
+		<Nav />
+	</header>
 
-{#key data.pathname}
-	<div in:fade={{ duration: 150, delay: 155 }} out:fade={{ duration: 150 }} class="contentWrapper">
-		{@render children?.()}
-	</div>
-{/key}
+	{#key data.pathname}
+		<div
+			in:fade={{ duration: 150, delay: 155 }}
+			out:fade={{ duration: 150 }}
+			class="contentWrapper"
+		>
+			{@render children?.()}
+		</div>
+	{/key}
+{/if}
 
 <style>
 	header {

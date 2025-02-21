@@ -1,17 +1,26 @@
 :root {
 	--color1: oklch(35% 0.5 313);
 	--color2: oklch(80% 0.4 222);
-	--deepBlue: oklch(36.01% 0.1583 261.63);
-	--black: oklch(19.54% 0.0258 6.69);
+	--deepBlue: oklch(26.03% 0.0523 262.08);
+	--black: oklch(20.34% 0.0196 317.12);
 	--cardGradient: linear-gradient(to bottom, var(--deepBlue), var(--black));
+	--radialGradient: radial-gradient(var(--deepBlue), var(--black)) no-repeat center center fixed;
+	--mainBackground: radial-gradient(oklch(25% 0 0) 0%, 69%, oklch(0% 0 0)) no-repeat center center
+		fixed;
 }
 
 body {
 	margin: 0;
-	background: radial-gradient(var(--deepBlue), var(--black)) no-repeat center center fixed;
+	background:
+		url('../assets/waves2.svg') no-repeat center 100% / 120% fixed,
+		var(--mainBackground);
 	font-family: 'Inter', sans-serif;
 	height: 100vh;
 	color: #ffffff;
+}
+
+.home {
+	background: var(--radialGradient);
 }
 
 .header {
