@@ -1,0 +1,39 @@
+<script>
+	import { fade } from 'svelte/transition';
+	// import Header from '$lib/components/Header.svelte';
+	import Logo from '$lib/components/Logo.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import '$lib/css/reset.css';
+	import '$lib/css/styles.css';
+	let { data, children } = $props();
+</script>
+
+<!-- <Header /> -->
+<header>
+	<a href="/"><Logo logoWidth={200} /></a>
+	<Nav />
+</header>
+
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
+{#key data.pathname}
+	<div in:fade={{ duration: 150, delay: 155 }} out:fade={{ duration: 150 }} class="contentWrapper">
+		{@render children?.()}
+	</div>
+{/key}
+
+<style>
+	header {
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>
