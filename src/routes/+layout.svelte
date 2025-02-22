@@ -11,7 +11,6 @@
 	let isReady = $state(false);
 	let title = $state('MSD Web Pro');
 	let currentPage = $state('');
-	$inspect(data);
 
 	$effect(() => {
 		isReady = false;
