@@ -145,3 +145,101 @@ body {
 		--gradient-angle: 360deg;
 	}
 }
+
+/* Common container styles */
+.contentContainer,
+.portfolioContainer,
+.contactContainer,
+.aboutContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+/* Common heading styles */
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: var(--color2);
+	text-align: center;
+	text-wrap: balance;
+}
+
+/* Common card styles */
+.card {
+	background: var(--cardGradient);
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.7);
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+/* Common grid styles */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+@media (max-width: 768px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Common form styles */
+.formGroup {
+	margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: var(--color2);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	color: white;
+	font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+	outline: none;
+	border-color: var(--color2);
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Common button styles */
+.button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	background: var(--color1);
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background: var(--color2);
+}
+
+.button:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}

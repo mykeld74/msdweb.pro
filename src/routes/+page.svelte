@@ -4,7 +4,7 @@
 </script>
 
 <div class="contentWrapper">
-	<div class="hero" out:fade>
+	<div class="hero">
 		<div class="light x1"></div>
 		<div class="light x2"></div>
 		<div class="light x3"></div>
@@ -36,6 +36,10 @@
 		position: relative;
 		margin-top: -20vh;
 	}
+	.header {
+		text-align: center;
+		text-wrap: balance;
+	}
 
 	.heroText {
 		display: grid;
@@ -59,7 +63,6 @@
 		text-transform: uppercase;
 		padding: 1rem 0.5rem;
 		cursor: pointer;
-
 		&:before,
 		&:after {
 			content: '';

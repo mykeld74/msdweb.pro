@@ -109,12 +109,6 @@
 		padding: 2rem;
 	}
 
-	h1 {
-		font-size: 2.5rem;
-		margin-bottom: 2rem;
-		color: var(--color1);
-	}
-
 	.contactContent {
 		display: grid;
 		grid-template-columns: 1fr;

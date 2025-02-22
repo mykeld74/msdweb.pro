@@ -12,8 +12,6 @@
 		}
 	});
 
-	$inspect(isMobile);
-
 	const pages = [
 		{
 			label: 'Get Started',
@@ -26,11 +24,14 @@
 		{
 			label: 'Contact Us',
 			href: '/contact-us'
+		},
+		{
+			label: 'Our Sites',
+			href: '/our-sites'
 		}
 	];
 	const currentPath = $derived(page.url.pathname);
 
-	$inspect(currentPath);
 	function closeMenu() {
 		const menu = document.getElementById('mobileMenu');
 		if (menu instanceof HTMLElement) {
