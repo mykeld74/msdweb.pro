@@ -56,7 +56,7 @@ async function captureScreenshots() {
 			await page.setViewportSize({ width, height });
 
 			const imageName = toCamelCase(site.name);
-			const imagePath = `${imageName}.webp`;
+			const imagePath = imageName;
 
 			// Capture the viewport only (16:9 portion)
 			await page.screenshot({

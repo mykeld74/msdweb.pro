@@ -1,5 +1,27 @@
 <script>
 	import portfolioSites from '$lib/constants/portfolioSites';
+	import {
+		guardianGarageDoors,
+		westwoodsCommunityChurch,
+		brendaBennettArt,
+		helpingHandsPhlebotomy,
+		essentialStrides,
+		kwdWoodworks,
+		lakewoodChristmas,
+		easterInLakewood
+	} from '$lib/assets';
+
+	// Create a mapping of image names to their imported sources
+	const imageMap = {
+		guardianGarageDoors,
+		westwoodsCommunityChurch,
+		brendaBennettArt,
+		helpingHandsPhlebotomy,
+		essentialStrides,
+		kwdWoodworks,
+		lakewoodChristmas,
+		easterInLakewood
+	};
 </script>
 
 <div class="portfolioContainer">
@@ -11,11 +33,7 @@
 				<div class="siteCard">
 					<a href={site.url} target="_blank" rel="noopener noreferrer">
 						<div class="imageContainer">
-							<img
-								src={`/src/lib/assets/portfolioScreenshots/${site.image}`}
-								alt={site.name}
-								loading="lazy"
-							/>
+							<img src={imageMap[site.image]} alt={site.name} loading="lazy" />
 						</div>
 						<h2>{site.name}</h2>
 					</a>
