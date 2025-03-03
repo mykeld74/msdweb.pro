@@ -8,7 +8,6 @@
 		name: '',
 		email: '',
 		phone: '',
-		projectType: 'website',
 		message: ''
 	};
 
@@ -30,7 +29,6 @@
 					name: '',
 					email: '',
 					phone: '',
-					projectType: 'website',
 					message: ''
 				};
 				setTimeout(() => {

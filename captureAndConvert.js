@@ -3,9 +3,15 @@ import portfolioSites from './src/lib/constants/portfolioSites.js';
 import sharp from 'sharp';
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Get current file path and directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 async function cleanDirectory() {
-	const baseDir = './src/lib/assets/portfolioScreenshots';
+	const baseDir = path.join(__dirname, 'src/lib/assets/portfolioScreenshots');
 	try {
 		// Remove the entire screenshots directory and its contents
 		await fs.rm(baseDir, { recursive: true, force: true });
@@ -16,7 +22,7 @@ async function cleanDirectory() {
 }
 
 async function ensureDirectories() {
-	const baseDir = './src/lib/assets/portfolioScreenshots';
+	const baseDir = path.join(__dirname, 'src/lib/assets/portfolioScreenshots');
 	await fs.mkdir(baseDir, { recursive: true });
 }
 

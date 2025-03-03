@@ -8,7 +8,8 @@
 		essentialStrides,
 		kwdWoodworks,
 		lakewoodChristmas,
-		easterInLakewood
+		easterInLakewood,
+		madeForAReason
 	} from '$lib/assets';
 
 	// Create a mapping of image names to their imported sources
@@ -20,7 +21,8 @@
 		essentialStrides,
 		kwdWoodworks,
 		lakewoodChristmas,
-		easterInLakewood
+		easterInLakewood,
+		madeForAReason
 	};
 </script>
 

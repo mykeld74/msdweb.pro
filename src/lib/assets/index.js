@@ -6,6 +6,7 @@ import essentialStrides from './portfolioScreenshots/essentialStrides.webp';
 import kwdWoodworks from './portfolioScreenshots/kwdWoodworks.webp';
 import lakewoodChristmas from './portfolioScreenshots/lakewoodChristmas.webp';
 import easterInLakewood from './portfolioScreenshots/easterInLakewood.webp';
+import madeForAReason from './portfolioScreenshots/madeForAReason.webp';
 
 export {
 	guardianGarageDoors,
@@ -15,5 +16,6 @@ export {
 	essentialStrides,
 	kwdWoodworks,
 	lakewoodChristmas,
-	easterInLakewood
+	easterInLakewood,
+	madeForAReason
 };
