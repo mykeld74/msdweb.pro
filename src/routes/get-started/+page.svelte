@@ -1,6 +1,9 @@
+<script>
+	import Sprite from '$lib/components/Sprite.svelte';
+</script>
+
 <div class="getStartedContainer">
 	<h1>Get Started</h1>
-
 	<section class="introSection">
 		<h2>Building Your Digital Presence Together</h2>
 		<p>
